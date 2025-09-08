@@ -37,10 +37,10 @@ async function sendEmail(name, email) {
 
   try {
     const info = await transporter.sendMail(mailOptions)
-    console.log(`[v0] Email sent successfully to ${name} (${email}): ${info.messageId}`)
+    console.log(` Email sent successfully to ${name} (${email}): ${info.messageId}`)
     return { success: true, messageId: info.messageId }
   } catch (error) {
-    console.error(`[v0] Failed to send email to ${name} (${email}):`, error)
+    console.error(` Failed to send email to ${name} (${email}):`, error)
     return { success: false, error: error.message }
   }
 }
@@ -125,7 +125,7 @@ export async function POST(request) {
       return NextResponse.json({ error: "No valid contacts found" }, { status: 400 })
     }
 
-    console.log(`[v0] Processing ${contacts.length} contacts for email sending`)
+    console.log(` Processing ${contacts.length} contacts for email sending`)
 
     // Send emails to all contacts
     const results = []
@@ -144,7 +144,7 @@ export async function POST(request) {
     }
 
     const successCount = results.filter((r) => r.status === "success").length
-    console.log(`[v0] Email sending completed: ${successCount}/${results.length} successful`)
+    console.log(` Email sending completed: ${successCount}/${results.length} successful`)
 
     return NextResponse.json({
       results,
@@ -155,7 +155,7 @@ export async function POST(request) {
       },
     })
   } catch (error) {
-    console.error("[v0] Error processing email request:", error)
+    console.error(" Error processing email request:", error)
     return NextResponse.json({ error: "Failed to process request" }, { status: 500 })
   }
 }
