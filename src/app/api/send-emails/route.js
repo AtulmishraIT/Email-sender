@@ -16,7 +16,7 @@ async function sendEmail(name, email) {
   const mailOptions = {
   from: `"WebCraft Studio" <${process.env.EMAIL_USER}>`,
   to: email,
-  subject: "Premium E-Commerce T-Shirt Website for Sale – Ready to Launch",
+  subject: "Premium E-Commerce T-Shirt Website for Sale - Ready to Launch",
   html: `
     <html>
       <body style="font-family: Arial, sans-serif; line-height: 1.6;">
@@ -47,7 +47,7 @@ async function sendEmail(name, email) {
           <li>Ideal for entrepreneurs or businesses wanting to enter the e-commerce space</li>
         </ul>
 
-        <p><strong>Asking Price:</strong> [Your Price in USD]</p>
+        <p><strong>Asking Price:</strong> $500/₹44,150</p>
 
         <p>I’m happy to provide full code access, documentation, and deployment guidance.</p>
 
@@ -56,8 +56,8 @@ async function sendEmail(name, email) {
         <p>Best regards,<br>
         <strong>Atul Mishra</strong><br>
         WebCraft Studio – Web Development Specialist<br>
-        📧 your-email@example.com<br>
-        🌐 <a href="https://webcraft-atulmishra.vercel.app/" target="_blank">https://webcraft-atulmishra.vercel.app</a></p>
+        📧 officialwebcraftstudio@gmail.com<br>
+        🌐 <a href="https://webcraft-atulmishra.vercel.app/" target="_blank">Portfolio</a></p>
       </body>
     </html>
   `,
