@@ -14,26 +14,55 @@ async function sendEmail(name, email) {
   })
 
   const mailOptions = {
-    from: `"WebCraft Studio" <${process.env.EMAIL_USER}>`,
-    to: email,
-    subject: "Grow Your Business with a Custom Website",
-    html: `
-      <html>
-        <body style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Dear ${name},</p>
+  from: `"WebCraft Studio" <${process.env.EMAIL_USER}>`,
+  to: email,
+  subject: "Premium E-Commerce T-Shirt Website for Sale – Ready to Launch",
+  html: `
+    <html>
+      <body style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <p>Dear ${name},</p>
 
-          <p>I'm <strong>Atul Mishra</strong> from <strong>WebCraft Studio</strong>. We build custom, modern websites to help businesses stand out online.</p>
+        <p>I hope this message finds you well.</p>
 
-          <p>See our portfolio: 
-          <a href="https://officialwebcraftstudio.vercel.app/" target="_blank">WebCraft Studio</a></p>
+        <p>I am reaching out to offer an exciting opportunity to acquire a modern, fully functional e-commerce website built with the MERN stack (MongoDB, Express.js, React, Node.js), designed specifically for selling t-shirts and apparel.</p>
 
-          <p>Let's schedule a free consultation this week.</p>
+        <p>👉 <strong>Website Live Demo:</strong><br>
+        <a href="https://tshirtweb-three.vercel.app/" target="_blank">https://tshirtweb-three.vercel.app/</a></p>
 
-          <p>Best regards,<br>Atul Mishra<br>📞 +91 7756064570</p>
-        </body>
-      </html>
-    `,
-  }
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>Modern, responsive, and mobile-friendly design</li>
+          <li>Secure user registration, login, and account management</li>
+          <li>Product filtering by category (Men’s, Women’s Collections)</li>
+          <li>Shopping cart, checkout, and order management</li>
+          <li>Clean codebase, optimized for performance</li>
+          <li>Built for scalability – easily customizable to fit any brand</li>
+        </ul>
+
+        <p><strong>Why Buy This Website?</strong></p>
+        <ul>
+          <li>Save months of development time</li>
+          <li>Professional design and functionality</li>
+          <li>Ready for deployment or further customization</li>
+          <li>Ideal for entrepreneurs or businesses wanting to enter the e-commerce space</li>
+        </ul>
+
+        <p><strong>Asking Price:</strong> [Your Price in USD]</p>
+
+        <p>I’m happy to provide full code access, documentation, and deployment guidance.</p>
+
+        <p>If you are interested or would like a demo walkthrough, please feel free to reply to this email or contact me directly at 📞 +91 7756064570.</p>
+
+        <p>Best regards,<br>
+        <strong>Atul Mishra</strong><br>
+        WebCraft Studio – Web Development Specialist<br>
+        📧 your-email@example.com<br>
+        🌐 <a href="https://webcraft-atulmishra.vercel.app/" target="_blank">https://webcraft-atulmishra.vercel.app</a></p>
+      </body>
+    </html>
+  `,
+}
+
 
   try {
     const info = await transporter.sendMail(mailOptions)
