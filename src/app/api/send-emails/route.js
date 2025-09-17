@@ -16,7 +16,7 @@ async function sendEmail(name, email) {
   const mailOptions = {
     from: `"WebCraft Studio" <${process.env.EMAIL_USER}>`,
     to: email,
-    subject: "Grow Your Business with a Custom Website",
+    subject: "Website Banwana Chahte Ho??",
     html: `
 <html>
 <body style="font-family: Arial, sans-serif; line-height: 1.6;">
